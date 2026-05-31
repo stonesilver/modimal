@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const open = ref(false);
+
 const NAV = [
     { label: "Collection", href: "/collection" },
     { label: "New In", href: "/new-in" },
@@ -30,12 +32,19 @@ const NAV = [
             <div class="center-item flex-1">
                 <ul class="flex items-center justify-center gap-4 max-lg:hidden xl:gap-6">
                     <li v-for="item in NAV" :key="item.label">
-                        <nuxt-link
+                        <!-- <nuxt-link
                             :to="item.href"
                             class="bodyXS xl:bodyMD text-gray-404040 hover:text-primary-600 block min-w-26 text-center transition-all duration-200"
                         >
                             {{ item.label }}
-                        </nuxt-link>
+                        </nuxt-link> -->
+
+                        <button
+                            class="bodyXS xl:bodyMD text-gray-404040 hover:text-primary-600 block min-w-26 text-center transition-all duration-200"
+                            @click="open = !open"
+                        >
+                            {{ item.label }}
+                        </button>
                     </li>
                 </ul>
 
@@ -59,6 +68,35 @@ const NAV = [
                     <shared-svg-icon name="outline/shopping-bag" class="w-4.5 shrink-0" />
                 </button>
             </div>
+        </div>
+
+        <div
+            :data-open="open"
+            class="flex h-137.5 max-h-0 w-full flex-col overflow-hidden bg-white transition-all duration-500 data-[open=true]:max-h-[90dvh] max-lg:hidden"
+        >
+            <ul class="content-wrapper grid flex-1 grid-cols-2 pt-4 pb-10!">
+                <li class="border"></li>
+
+                <li class="grid grid-cols-2 gap-4">
+                    <div class="">
+                        <img
+                            src="https://res.cloudinary.com/stonesilver/image/upload/f_auto,q_auto,w_auto/v1780210793/Modimal/blouse_n8mymr"
+                            alt="blouses"
+                            class="block size-full object-cover"
+                        />
+                        <p class="bodyMD mt-1 text-black">Blouses</p>
+                    </div>
+
+                    <div class="">
+                        <img
+                            src="https://res.cloudinary.com/stonesilver/image/upload/f_auto,q_auto,w_auto/v1780210792/Modimal/plus-size_o48dgj.webp"
+                            alt="plus size"
+                            class="block size-full object-cover"
+                        />
+                        <p class="bodyMD mt-1 text-black">Plus Size</p>
+                    </div>
+                </li>
+            </ul>
         </div>
     </header>
 </template>

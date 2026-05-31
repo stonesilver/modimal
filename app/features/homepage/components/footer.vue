@@ -4,10 +4,10 @@ import { FOOTER_LINKS } from "../homepage.constant";
 const form = reactive({ email: "", subscribe: false });
 
 const SOCIALS = [
-    { href: "", icon: "brand/instagram" },
-    { href: "", icon: "brand/facebook" },
-    { href: "", icon: "brand/pinterest" },
-    { href: "", icon: "brand/tiktok" },
+    { href: "/", icon: "brand/instagram" },
+    { href: "/", icon: "brand/facebook" },
+    { href: "/", icon: "brand/pinterest" },
+    { href: "/", icon: "brand/tiktok" },
 ];
 
 const handleSubmit = () => {
