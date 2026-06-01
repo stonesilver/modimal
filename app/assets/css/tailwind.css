@@ -317,7 +317,7 @@
 }
 
 @utility content-wrapper {
-    @apply mx-auto w-full max-w-306 px-4 xl:px-0;
+    @apply mx-auto w-full max-w-306 px-4 md:px-8 xl:px-0;
 }
 
 @utility center-item {

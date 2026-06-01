@@ -8,7 +8,7 @@
             <li class="space-y-6 md:space-y-16">
                 <div class="md:relative">
                     <img
-                        src="https://www.figma.com/file/Wzm7wuyAnWs7Ir8Ej979fc/image/7d6e011d637d8076f450d0748072279f5cc2048f"
+                        src="https://res.cloudinary.com/stonesilver/image/upload/f_auto,q_auto,w_auto/v1780299733/Modimal/boluses_qasr6q.webp"
                         alt="Boluses"
                         class="block h-41.25 w-full object-cover md:h-129.5"
                     />
@@ -20,13 +20,13 @@
 
                 <div class="md:relative">
                     <img
-                        src="https://www.figma.com/file/Wzm7wuyAnWs7Ir8Ej979fc/image/e1ebaac7132efdc745cc3cbc6bead99ab9a90c31"
-                        alt="Pants"
+                        src="https://res.cloudinary.com/stonesilver/image/upload/f_auto,q_auto,w_auto/v1780299734/Modimal/dresses_gimden.webp"
+                        alt="Dresses"
                         class="block h-69 w-full object-cover md:h-209.5"
                     />
 
                     <Button variant="white" class="w-full cursor-auto max-md:justify-start md:absolute md:right-4 md:bottom-4 md:w-46.25">
-                        Pants
+                        Dresses
                     </Button>
                 </div>
             </li>
@@ -34,19 +34,19 @@
             <li class="flex flex-col justify-between space-y-8 md:space-y-36">
                 <div class="md:relative">
                     <img
-                        src="https://www.figma.com/file/Wzm7wuyAnWs7Ir8Ej979fc/image/ad9cd55b08cf35cdef25b1b91c9267cde6c2da60"
-                        alt="Dresses"
+                        src="https://res.cloudinary.com/stonesilver/image/upload/f_auto,q_auto,w_auto/v1780299737/Modimal/pants_ffulap.webp"
+                        alt="Pants"
                         class="block h-63.25 w-full object-cover md:h-210"
                     />
 
-                    <Button variant="white" class="w-full cursor-auto max-md:justify-start md:absolute md:right-4 md:bottom-4 md:w-46.25">
-                        Dresses
+                    <Button variant="white" class="w-full cursor-auto max-md:justify-start md:absolute md:bottom-4 md:left-4 md:w-46.25">
+                        Pants
                     </Button>
                 </div>
 
                 <div class="md:relative">
                     <img
-                        src="https://www.figma.com/file/Wzm7wuyAnWs7Ir8Ej979fc/image/73e14e494a3e57253a1e3434e22de58928784b6f"
+                        src="https://res.cloudinary.com/stonesilver/image/upload/f_auto,q_auto,w_auto/v1780299735/Modimal/outwear_z2izi6.webp"
                         alt="Outwears"
                         class="block h-33.75 w-full object-cover md:h-108.75"
                     />

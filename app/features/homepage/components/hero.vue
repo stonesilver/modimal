@@ -5,7 +5,7 @@ import { cn } from "~/lib/utils";
 
 <template>
     <section
-        class="flex h-[80dvh] flex-col bg-[url('https://www.figma.com/file/Wzm7wuyAnWs7Ir8Ej979fc/image/5acf40a14ec616f602d9f91b003061a5deef40d0')] bg-cover bg-position-[left_-330px_center] bg-no-repeat md:bg-center"
+        class="flex h-[80dvh] flex-col bg-[url('https://res.cloudinary.com/stonesilver/image/upload/f_auto,q_auto,w_auto/v1780238954/Modimal/hero-image_mzdkuy.webp')] bg-cover bg-position-[left_-330px_center] bg-no-repeat md:bg-center"
     >
         <div class="content-wrapper flex flex-1 flex-col justify-end pb-6 md:pb-25.75">
             <h1 class="font-gill-sans-condensed text-xl italic sm:text-[2.25rem]">

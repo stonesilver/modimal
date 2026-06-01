@@ -2,37 +2,37 @@
 const MODIWEEK = [
     {
         id: "ec85055d-1f07-4178-a105-7ee0c7b222e6",
-        image: "https://www.figma.com/file/Wzm7wuyAnWs7Ir8Ej979fc/image/47dbfd79c6b95428bbbaa4151b79b1371e32ef3c",
+        image: "https://res.cloudinary.com/stonesilver/image/upload/f_auto,q_auto,w_auto/v1780238493/Modimal/sunday_yo3upw.webp",
         weekday: "Sunday",
     },
     {
         id: "ca53fca5-1eb5-47c0-97a7-9af99eb3d8ee",
-        image: "https://www.figma.com/file/Wzm7wuyAnWs7Ir8Ej979fc/image/9d9ff4b343c6ec950877c8232a27898f114312ac",
+        image: "https://res.cloudinary.com/stonesilver/image/upload/f_auto,q_auto,w_auto/v1780238492/Modimal/monday_xaoyn6.webp",
         weekday: "Monday",
     },
     {
         id: "c9c888be-6903-4a90-9e3f-270ed1419a81",
-        image: "https://www.figma.com/file/Wzm7wuyAnWs7Ir8Ej979fc/image/983781cf4566146f7e076271e6a38076e1a0f454",
+        image: "https://res.cloudinary.com/stonesilver/image/upload/f_auto,q_auto,w_auto/v1780238493/Modimal/tuesday_xjk1ee.webp",
         weekday: "Tuesday",
     },
     {
         id: "8da99d8f-b288-4254-bb9d-ac5cfab1ac27",
-        image: "https://www.figma.com/file/Wzm7wuyAnWs7Ir8Ej979fc/image/06aae4d5926c1cd903beb633f085b86f962325a3",
+        image: "https://res.cloudinary.com/stonesilver/image/upload/f_auto,q_auto,w_auto/v1780238494/Modimal/wednesday_nyta81.webp",
         weekday: "Wednesday",
     },
     {
         id: "87cd6d0a-0331-4bec-94a5-6885dd64c3e7",
-        image: "https://www.figma.com/file/Wzm7wuyAnWs7Ir8Ej979fc/image/fa7fe57a40471af0f1a8b7063b5d79ec574a7c11",
+        image: "https://res.cloudinary.com/stonesilver/image/upload/f_auto,q_auto,w_auto/v1780238493/Modimal/thursday_szeyam.webp",
         weekday: "Thursday",
     },
     {
         id: "d4c5ff8d-d733-41a5-8841-bb3ad9b62c36",
-        image: "https://www.figma.com/file/Wzm7wuyAnWs7Ir8Ej979fc/image/47dbfd79c6b95428bbbaa4151b79b1371e32ef3c",
+        image: "https://res.cloudinary.com/stonesilver/image/upload/f_auto,q_auto,w_auto/v1780238493/Modimal/sunday_yo3upw.webp",
         weekday: "Friday",
     },
     {
         id: "9dcb9976-c022-4891-a4b3-e12326b180ed",
-        image: "https://www.figma.com/file/Wzm7wuyAnWs7Ir8Ej979fc/image/9d9ff4b343c6ec950877c8232a27898f114312ac",
+        image: "https://res.cloudinary.com/stonesilver/image/upload/f_auto,q_auto,w_auto/v1780238492/Modimal/monday_xaoyn6.webp",
         weekday: "Saturday",
     },
 ];

@@ -1,13 +1,26 @@
 <script setup lang="ts">
-const open = ref(false);
+import { NAV_LIST } from "../homepage.constant";
 
-const NAV = [
-    { label: "Collection", href: "/collection" },
-    { label: "New In", href: "/new-in" },
-    { label: "Modiweek", href: "/modiweek" },
-    { label: "Plus Size", href: "/plus-size" },
-    { label: "Sustainability", href: "/sustainability" },
-];
+type Menus = "COLLECTION" | "NEW_IN" | "MODIWEEK" | "PLUS_SIZE" | "SUSTAINABILITY";
+interface OpenState {
+    tab: Menus;
+    search: boolean;
+    menu: boolean;
+    mobileMenu: boolean;
+}
+
+const open = reactive<OpenState>({ tab: "" as Menus, menu: false, search: false, mobileMenu: false });
+
+const openMenu = (tab: Menus) => {
+    open.menu = tab === open.tab ? !open.menu : true;
+    open.tab = tab;
+    open.search = false;
+};
+
+const toggleSearch = () => {
+    open.search = !open.search;
+    open.menu = false;
+};
 </script>
 
 <template>
@@ -17,33 +30,35 @@ const NAV = [
         <div class="content-wrapper flex flex-1 items-center gap-4 bg-white py-3 lg:py-4">
             <div class="w-fit">
                 <div class="flex items-center gap-2 lg:hidden">
-                    <button type="button" class="center-item size-6">
-                        <shared-svg-icon name="outline/hamburger" class="w-4.5 shrink-0" />
+                    <button type="button" class="center-item size-6" @click="open.mobileMenu = !open.mobileMenu">
+                        <shared-svg-icon :name="open.mobileMenu ? 'outline/close' : 'outline/hamburger'" class="w-4.5 shrink-0" />
                     </button>
 
-                    <button type="button" class="center-item size-6">
+                    <button type="button" class="center-item size-6" @click="toggleSearch">
                         <shared-svg-icon name="outline/search" class="size-4.5 shrink-0" />
                     </button>
                 </div>
 
-                <shared-svg-icon name="brand/modimal" class="shrink-0 max-lg:hidden" />
+                <nuxt-link to="/" class="shrink-0 max-lg:hidden">
+                    <shared-svg-icon name="brand/modimal" />
+                </nuxt-link>
             </div>
 
             <div class="center-item flex-1">
                 <ul class="flex items-center justify-center gap-4 max-lg:hidden xl:gap-6">
-                    <li v-for="item in NAV" :key="item.label">
+                    <li v-for="{ key, label } in NAV_LIST" :key="label">
                         <!-- <nuxt-link
-                            :to="item.href"
+                            :to="href"
                             class="bodyXS xl:bodyMD text-gray-404040 hover:text-primary-600 block min-w-26 text-center transition-all duration-200"
                         >
-                            {{ item.label }}
+                            {{ label }}
                         </nuxt-link> -->
 
                         <button
                             class="bodyXS xl:bodyMD text-gray-404040 hover:text-primary-600 block min-w-26 text-center transition-all duration-200"
-                            @click="open = !open"
+                            @click="openMenu(key)"
                         >
-                            {{ item.label }}
+                            {{ label }}
                         </button>
                     </li>
                 </ul>
@@ -52,7 +67,7 @@ const NAV = [
             </div>
 
             <div class="flex w-fit items-center gap-2.5 sm:gap-6">
-                <button type="button" class="center-item size-6 max-lg:hidden">
+                <button type="button" class="center-item size-6 max-lg:hidden" @click="toggleSearch">
                     <shared-svg-icon name="outline/search" class="size-4.5 shrink-0" />
                 </button>
 
@@ -70,33 +85,10 @@ const NAV = [
             </div>
         </div>
 
-        <div
-            :data-open="open"
-            class="flex h-137.5 max-h-0 w-full flex-col overflow-hidden bg-white transition-all duration-500 data-[open=true]:max-h-[90dvh] max-lg:hidden"
-        >
-            <ul class="content-wrapper grid flex-1 grid-cols-2 pt-4 pb-10!">
-                <li class="border"></li>
+        <homepage-components-sub-menu :open="open" />
 
-                <li class="grid grid-cols-2 gap-4">
-                    <div class="">
-                        <img
-                            src="https://res.cloudinary.com/stonesilver/image/upload/f_auto,q_auto,w_auto/v1780210793/Modimal/blouse_n8mymr"
-                            alt="blouses"
-                            class="block size-full object-cover"
-                        />
-                        <p class="bodyMD mt-1 text-black">Blouses</p>
-                    </div>
+        <homepage-components-mobile-sub-menu v-if="open.mobileMenu" />
 
-                    <div class="">
-                        <img
-                            src="https://res.cloudinary.com/stonesilver/image/upload/f_auto,q_auto,w_auto/v1780210792/Modimal/plus-size_o48dgj.webp"
-                            alt="plus size"
-                            class="block size-full object-cover"
-                        />
-                        <p class="bodyMD mt-1 text-black">Plus Size</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <homepage-components-header-search v-model="open.search" />
     </header>
 </template>
