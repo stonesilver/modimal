@@ -339,4 +339,8 @@
     button {
         @apply cursor-pointer;
     }
+
+    [role="button"] {
+        @apply cursor-pointer;
+    }
 }
