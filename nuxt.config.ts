@@ -2,38 +2,49 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  compatibilityDate: "2025-07-15",
-  devtools: { enabled: true },
+    compatibilityDate: "2025-07-15",
+    devtools: { enabled: true },
 
-  devServer: {
-    port: 3200,
-  },
-
-  css: ["~/assets/css/tailwind.css"],
-
-  vite: {
-    plugins: [tailwindcss()],
-    optimizeDeps: {
-      include: ["@vue/devtools-core", "@vue/devtools-kit"],
+    devServer: {
+        port: 3200,
     },
-  },
 
-  modules: ["shadcn-nuxt", "@vueuse/nuxt"],
-  shadcn: {
-    /**
-     * Prefix for all the imported component.
-     * @default "Ui"
-     */
-    prefix: "",
-    /**
-     * Directory that the component lives in.
-     * Will respect the Nuxt aliases.
-     * @link https://nuxt.com/docs/api/nuxt-config#alias
-     * @default "@/components/ui"
-     */
-    componentDir: "@/components/ui",
-  },
-  components: {
-    dirs: ["~/components", "~/features"],
-  },
+    css: ["~/assets/css/tailwind.css"],
+
+    vite: {
+        plugins: [tailwindcss()],
+        optimizeDeps: {
+            include: [
+                "@lucide/vue",
+                "@vee-validate/yup",
+                "@vue/devtools-core",
+                "@vue/devtools-kit",
+                "class-variance-authority",
+                "clsx",
+                "reka-ui",
+                "tailwind-merge",
+                "vee-validate",
+                "yup",
+            ],
+        },
+    },
+
+    modules: ["shadcn-nuxt", "@vueuse/nuxt"],
+    shadcn: {
+        /**
+         * Prefix for all the imported component.
+         * @default "Ui"
+         */
+        prefix: "",
+        /**
+         * Directory that the component lives in.
+         * Will respect the Nuxt aliases.
+         * @link https://nuxt.com/docs/api/nuxt-config#alias
+         * @default "@/components/ui"
+         */
+        componentDir: "@/components/ui",
+    },
+    components: {
+        dirs: ["~/components", "~/features"],
+    },
 });

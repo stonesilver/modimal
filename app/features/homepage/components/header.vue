@@ -71,13 +71,17 @@ const toggleSearch = () => {
                     <shared-svg-icon name="outline/search" class="size-4.5 shrink-0" />
                 </button>
 
-                <button type="button" class="center-item size-6 max-lg:hidden">
+                <button type="button" class="center-item size-6 max-lg:hidden" @click="navigateTo('/signup')">
                     <shared-svg-icon name="outline/user" class="w-4.5 shrink-0" />
                 </button>
 
-                <button type="button" class="center-item size-6">
-                    <shared-svg-icon name="outline/heart" class="w-4.5 shrink-0" />
-                </button>
+                <nuxt-link to="/wishlist" class="center-item size-6">
+                    <shared-svg-icon
+                        :data-active="$route.path === '/wishlist'"
+                        name="outline/heart"
+                        class="data-[active=true]:[&_path]:fill-error data-[active=true]:[&_path]:stroke-error w-4.5 shrink-0"
+                    />
+                </nuxt-link>
 
                 <button type="button" class="center-item size-6">
                     <shared-svg-icon name="outline/shopping-bag" class="w-4.5 shrink-0" />
